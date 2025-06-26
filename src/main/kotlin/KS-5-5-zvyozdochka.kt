@@ -8,7 +8,6 @@ fun main() {
     val thirdAutoNumber = (0..42).random()
 
     val autoNumbers = listOf(firstAutoNumber, secondAutoNumber, thirdAutoNumber)
-    // println(autoNumbers) - Для тестирования
 
     println("Придумай первое число: ")
     val firstUserNumber = readln().toInt()
@@ -21,7 +20,7 @@ fun main() {
 
     val userNumbers = listOf(firstUserNumber, secondUserNumber, thirdUserNumber)
 
-    val commonNumbers = autoNumbers.intersect(userNumbers).toList()
+    val commonNumbers = autoNumbers.intersect(userNumbers)
     val numberOfNumbers = commonNumbers.size
 
     println("")
