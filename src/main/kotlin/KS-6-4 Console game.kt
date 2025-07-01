@@ -2,7 +2,6 @@ package org.example
 
 fun main() {
     val luckyNumber = (1..9).random()
-    println(luckyNumber)
 
     var counter = 5
 
