@@ -1,4 +1,4 @@
-package org.example
+package org.example.KS_Lesson6
 
 fun main() {
     val luckyNumber = (1..9).random()

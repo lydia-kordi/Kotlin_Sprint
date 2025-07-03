@@ -1,4 +1,4 @@
-package org.example
+package org.example.KS_Lesson1
 
 fun main () {
     var numberOfOrders: Int = 75

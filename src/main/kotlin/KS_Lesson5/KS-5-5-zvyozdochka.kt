@@ -1,4 +1,4 @@
-package org.example
+package org.example.KS_Lesson5
 
 fun main() {
     println("Супер-лотерея, только сегодня! Угадай три числа от 0 до 42 и получи джек-пот!")
