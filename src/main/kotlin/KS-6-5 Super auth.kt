@@ -12,7 +12,7 @@ fun main() {
         println("Докажи, что ты не робот! Сколько будет $firstNumber + $secondNumber?")
         val userAnswer = readln().toInt()
 
-        if (summNumbers==userAnswer) {
+        if (summNumbers == userAnswer) {
             println("Добро пожаловать!")
             break
         } else if (counter < 2) {
