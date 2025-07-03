@@ -3,12 +3,9 @@ package org.example
 fun main() {
     println("Сколько секунд нужно засечь?")
     val secondsCount = readln().toInt()
-    var counter = secondsCount
+    val delayTime: Long = 1000 * secondsCount.toLong()
 
-    while (counter > 0) {
-        Thread.sleep(1000)
-        counter--
-    }
+    Thread.sleep(delayTime)
 
     println("Прошло $secondsCount секунд!")
 }
