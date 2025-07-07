@@ -1,4 +1,4 @@
-package org.example
+package org.example.KS_Lesson7
 fun main() {
     val lettersRange = 'a'..'z'
     val numbersRange = 0..9

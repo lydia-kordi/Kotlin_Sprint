@@ -1,4 +1,4 @@
-package org.example
+package org.example.KS_Lesson8
 
 fun main() {
     val recipe = arrayOf("Курица", "Ананас", "Зелёный лук", "Майонез")
