@@ -13,8 +13,8 @@ fun diceRoll (): Int = (1..6).random()
 
 fun resultCheck(userRoll: Int, computerRoll: Int) {
     when {
-        userRoll > computerRoll -> println("Победило человечество")
-        userRoll < computerRoll -> println("Победила машина")
-        else -> println("Победила дружба")
+        userRoll > computerRoll -> println("Победило человечество!")
+        userRoll < computerRoll -> println("Победила машина!")
+        else -> println("Победила дружба!")
     }
 }
