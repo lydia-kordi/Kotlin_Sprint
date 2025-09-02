@@ -1,4 +1,4 @@
-package org.example
+package org.example.KS_Lesson9
 
 fun main() {
     val userRecipe = mutableListOf("Кола", "Лёд", "Лимон")
