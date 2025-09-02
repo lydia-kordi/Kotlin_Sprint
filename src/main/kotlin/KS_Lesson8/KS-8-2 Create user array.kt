@@ -1,4 +1,4 @@
-package org.example
+package org.example.KS_Lesson8
 
 fun main() {
     println("Сколько Ингридиентов вы хотите записать в рецепт?")

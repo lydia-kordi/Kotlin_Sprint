@@ -12,6 +12,5 @@ fun main() {
             password += numbersRange.random()
         }
     }
-
     println("Сгенерированный пароль: $password")
 }
