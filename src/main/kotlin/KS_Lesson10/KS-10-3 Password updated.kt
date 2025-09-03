@@ -1,15 +1,16 @@
-package KS_Lesson10
+package org.example.KS_Lesson10
 
 fun main() {
     println("Задайте длину пароля:")
-    val passwordLength = readln().toInt()
 
+    val passwordLength = readln().toInt()
     val newPassword =  passwordGeneration(passwordLength)
+
     printPassword(newPassword)
 }
 
 fun passwordGeneration (passwordLength: Int): String {
-    val oddNumbers = "0123456789"
+    val oddNumbers = 0..9
     val evenNumbers = "!\"#\$%&'()*+,-./ "
 
     var password = ""
@@ -21,7 +22,7 @@ fun passwordGeneration (passwordLength: Int): String {
         }
     }
     return password
-    }
+}
 
 fun printPassword (password: String) {
     println("Ваш пароль: $password")
