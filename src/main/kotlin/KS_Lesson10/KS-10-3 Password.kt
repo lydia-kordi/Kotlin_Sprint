@@ -10,7 +10,7 @@ fun main() {
 }
 
 fun passwordGeneration (passwordLength: Int): String {
-    val oddNumbers = "0123456789"
+    val oddNumbers = 0..9
     val evenNumbers = "!\"#\$%&'()*+,-./ "
 
     var password = ""
