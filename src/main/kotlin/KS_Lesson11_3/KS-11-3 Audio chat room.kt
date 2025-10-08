@@ -7,7 +7,6 @@ fun main() {
     val userThree = ChatUser(nickname = "Олег", avatar = "olegoleg.jpg", actualStatus = UserStatus.TALKING.badge)
     val userFour = ChatUser(nickname = "Константин", avatar = "kkkkk.jpg")
     val userFive = ChatUser(nickname = "Яна", avatar = "yana2002.jpg", actualStatus = UserStatus.TALKING.badge)
-    val extraUser = ChatUser(nickname = "Маша", avatar = "mashaa.jpg")
 
     val kotlinChatRoom = ChatRoom(
         cover = "android.jpg",
@@ -16,7 +15,7 @@ fun main() {
     )
 }
 
-class ChatUser(var nickname: String, var avatar: String, var actualStatus: String = UserStatus.MIC_OFF.badge) {
+class ChatUser(var nickname: String, val avatar: String, var actualStatus: String = UserStatus.MIC_OFF.badge) {
     fun clickLong() {
         println(nickname)
     }
@@ -32,14 +31,19 @@ enum class UserStatus(val badge: String) {
     MUTED("пользователь заглушен")
 }
 
-class ChatRoom(var cover: String, var title: String, var chatUsers: MutableList<ChatUser>) {
+class ChatRoom(val cover: String, val title: String, var chatUsers: MutableList<ChatUser>) {
     fun addUser(user: ChatUser) {
         chatUsers.add(user)
         println("К чату присоединился пользователь ${user.nickname}")
     }
 
-    fun changeStatus(user: ChatUser, newStatus: String) {
-        user.actualStatus = newStatus
-        println("У пользователя ${user.nickname} новый статус: ${user.actualStatus}")
+    fun changeStatus(nickname: String, newStatus: String) {
+        val user = chatUsers.find { it.nickname == nickname }
+        if (user != null) {
+            user.actualStatus = newStatus
+            println("У пользователя ${user.nickname} новый статус: ${user.actualStatus}")
+        } else {
+            println("Пользователь с ником $nickname не найден.")
+        }
     }
 }
