@@ -15,7 +15,7 @@ fun main() {
     )
 }
 
-class ChatUser(var nickname: String, val avatar: String, var actualStatus: String = UserStatus.MIC_OFF.badge) {
+class ChatUser(val nickname: String, val avatar: String, var actualStatus: String = UserStatus.MIC_OFF.badge) {
     fun clickLong() {
         println(nickname)
     }
@@ -31,7 +31,7 @@ enum class UserStatus(val badge: String) {
     MUTED("пользователь заглушен")
 }
 
-class ChatRoom(val cover: String, val title: String, var chatUsers: MutableList<ChatUser>) {
+class ChatRoom(val cover: String, val title: String, val chatUsers: MutableList<ChatUser>) {
     fun addUser(user: ChatUser) {
         chatUsers.add(user)
         println("К чату присоединился пользователь ${user.nickname}")
