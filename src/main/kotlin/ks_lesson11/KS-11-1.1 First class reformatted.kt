@@ -1,4 +1,4 @@
-package org.kotlin.sprint.ks_lesson_11_1
+package org.kotlin.sprint.ks_lesson11
 
 class User(
     val id: Int,
