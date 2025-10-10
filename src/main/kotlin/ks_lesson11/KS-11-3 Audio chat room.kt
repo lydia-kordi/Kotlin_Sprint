@@ -1,4 +1,4 @@
-package org.kotlin.sprint.KS_Lesson11_3
+package org.kotlin.sprint.ks_lesson11
 
 fun main() {
 
