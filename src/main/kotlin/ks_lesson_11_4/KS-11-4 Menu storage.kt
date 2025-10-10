@@ -2,7 +2,7 @@ package org.kotlin.sprint.ks_lesson_11_4
 
 class Ingredient(
     val title: String,
-    val quantity: Double,
+    val quantity: String,
     val measureUnits: String,
 )
 
