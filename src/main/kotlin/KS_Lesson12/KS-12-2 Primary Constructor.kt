@@ -1,6 +1,6 @@
 package org.kotlin.sprint.KS_Lesson12
 
-class DailyWeather2(var dayTemperature2: Int, var nightTemperature2: Int, var isRainfall2: Boolean) {
+class DailyWeather2(val dayTemperature2: Int, val nightTemperature2: Int, val isRainfall2: Boolean) {
 
     fun showWeather() {
         println("Дневная температура: $dayTemperature2°C")
