@@ -2,26 +2,23 @@ package org.kotlin.sprint.KS_Lesson12
 
 import kotlin.math.round
 
-class DailyWeather3(dayTemperature3: Int, nightTemperature3: Int, isRainfall3: Boolean) {
-    var dayTemperature3 = dayTemperature3
-    var nightTemperature3 = nightTemperature3
-    var isRainfall3 = isRainfall3
+const val KELVIN_TO_CELSIUS_OFFSET = 273.15
 
-    init {
-        this.dayTemperature3 = round(dayTemperature3 - 273.15).toInt()
-        this.nightTemperature3 = round(nightTemperature3 - 273.15).toInt()
-    }
+class DailyWeather3(dayTemperatureK: Int, nightTemperatureK: Int, isRainfall: Boolean) {
+    val dayTemperature = round(dayTemperatureK - KELVIN_TO_CELSIUS_OFFSET).toInt()
+    val nightTemperature = round(nightTemperatureK - KELVIN_TO_CELSIUS_OFFSET).toInt()
+    val isRainfall = isRainfall
 
     fun showWeather() {
-        println("Дневная температура: $dayTemperature3°C")
-        println("Ночная температура: $nightTemperature3°C")
-        println("Осадки: ${if (isRainfall3) "да" else "нет"}")
+        println("Дневная температура: $dayTemperature°C")
+        println("Ночная температура: $nightTemperature°C")
+        println("Осадки: ${if (isRainfall) "да" else "нет"}")
     }
 }
 
 fun main() {
-    val mondayWeather = DailyWeather3(dayTemperature3 = 290, nightTemperature3 = 270, isRainfall3 = true)
-    val tuesdayWeather = DailyWeather3(dayTemperature3 = 301, nightTemperature3 = 285, isRainfall3 = false)
+    val mondayWeather = DailyWeather3(dayTemperatureK = 290, nightTemperatureK = 270, isRainfall = true)
+    val tuesdayWeather = DailyWeather3(dayTemperatureK = 301, nightTemperatureK = 285, isRainfall = false)
 
     mondayWeather.showWeather()
     tuesdayWeather.showWeather()
