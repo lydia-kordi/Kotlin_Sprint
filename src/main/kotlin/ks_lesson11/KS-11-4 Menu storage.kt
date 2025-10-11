@@ -1,4 +1,4 @@
-package org.kotlin.sprint.ks_lesson_11_4
+package org.kotlin.sprint.ks_lesson11
 
 class Ingredient(
     val title: String,
