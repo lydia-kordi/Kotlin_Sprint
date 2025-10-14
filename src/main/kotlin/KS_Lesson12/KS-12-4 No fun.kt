@@ -2,11 +2,11 @@ package org.kotlin.sprint.KS_Lesson12
 
 import kotlin.math.round
 
-const val KELVIN_TO_CELSIUS_OFFSET = 273.15
+const val KELVIN_TO_CELSIUS_OFFSET1 = 273.15
 
 class DailyWeather4(dayTemperatureK: Int, nightTemperatureK: Int, isRainfall: Boolean) {
-    val dayTemperature = round(dayTemperatureK - KELVIN_TO_CELSIUS_OFFSET).toInt()
-    val nightTemperature = round(nightTemperatureK - KELVIN_TO_CELSIUS_OFFSET).toInt()
+    val dayTemperature = round(dayTemperatureK - KELVIN_TO_CELSIUS_OFFSET1).toInt()
+    val nightTemperature = round(nightTemperatureK - KELVIN_TO_CELSIUS_OFFSET1).toInt()
     val isRainfall = isRainfall
 
     init {
