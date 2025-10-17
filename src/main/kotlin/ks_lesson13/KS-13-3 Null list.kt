@@ -12,14 +12,7 @@ fun main() {
         Contacts(name = "Света", phone = 79329384541),
     )
 
-    val contactCompanies = mutableSetOf<String>()
-
-    for (contact in colleagueList) {
-        if (!contact.company.isNullOrEmpty()) {
-            contactCompanies.add(contact.company)
-        }
-    }
-
+    val contactCompanies = colleagueList.mapNotNull { it.company }.toSet()
     println(contactCompanies)
 
 }
