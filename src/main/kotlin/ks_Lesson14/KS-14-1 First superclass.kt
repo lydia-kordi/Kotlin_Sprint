@@ -2,28 +2,28 @@ package org.kotlin.sprint.ks_Lesson14
 
 open class LinerShip(
     val name: String,
-    val speed: Int = 70,
-    val cargoLoad: Int = 50,
-    val passengerLoad: Int = 350,
+    open val speed: Int = 70,
+    open val cargoLoad: Int = 50,
+    open val passengerLoad: Int = 350,
 )
 
 class CargoShip(
     name: String,
-    speed: Int = 40,
-    cargoLoad: Int = 200,
-    passengerLoad: Int = 25,
-) : LinerShip(name, speed, cargoLoad, passengerLoad)
+    override val speed: Int = 40,
+    override val cargoLoad: Int = 200,
+    override val passengerLoad: Int = 25,
+) : LinerShip(name)
 
 class IcebreakerShip(
     name: String,
-    speed: Int = 20,
-    cargoLoad: Int = 100,
-    passengerLoad: Int = 10,
+    override val speed: Int = 20,
+    override val cargoLoad: Int = 100,
+    override val passengerLoad: Int = 10,
     val canBreakIce: Boolean = true,
-) : LinerShip(name, speed, cargoLoad, passengerLoad)
+) : LinerShip(name)
 
 fun main() {
-    val nevaShip = LinerShip(name = "Neva")
-    val volgaShip = CargoShip(name = "Volga")
-    val eniseyShip = IcebreakerShip(name = "Enisey")
+    val linerShip = LinerShip(name = "Neva")
+    val cargoShip = CargoShip(name = "Volga")
+    val icebreakerShip = IcebreakerShip(name = "Enisey")
 }
