@@ -7,20 +7,18 @@ open class LinerShip(
     open val passengerLoad: Int = 350,
 )
 
-class CargoShip(
-    name: String,
-    override val speed: Int = 40,
-    override val cargoLoad: Int = 200,
-    override val passengerLoad: Int = 25,
-) : LinerShip(name)
+class CargoShip(name: String) : LinerShip(name) {
+    override val speed: Int = 40
+    override val cargoLoad: Int = 200
+    override val passengerLoad: Int = 25
+}
 
-class IcebreakerShip(
-    name: String,
-    override val speed: Int = 20,
-    override val cargoLoad: Int = 100,
-    override val passengerLoad: Int = 10,
-    val canBreakIce: Boolean = true,
-) : LinerShip(name)
+class IcebreakerShip(name: String) : LinerShip(name) {
+    override val speed: Int = 20
+    override val cargoLoad: Int = 100
+    override val passengerLoad: Int = 10
+    val canBreakIce: Boolean = true
+}
 
 fun main() {
     val linerShip = LinerShip(name = "Neva")
