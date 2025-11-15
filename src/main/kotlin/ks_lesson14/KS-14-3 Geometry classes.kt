@@ -1,7 +1,7 @@
 package org.kotlin.sprint.ks_lesson14
 
-const val Black = "Black"
-const val White = "White"
+const val BLACK = "Black"
+const val WHITE = "White"
 
 abstract class Figure {
     abstract val color: String
@@ -27,17 +27,17 @@ class Rectangle(
 }
 
 fun main() {
-    val circle1 = Circle(color = Black, radius = 2)
-    val circle2 = Circle(color = White, radius = 3)
+    val circle1 = Circle(color = BLACK, radius = 2)
+    val circle2 = Circle(color = WHITE, radius = 3)
 
-    val rectangle1 = Rectangle(color = Black, length = 10, width = 15)
-    val rectangle2 = Rectangle(color = White, length = 12, width = 19)
-    val rectangle3 = Rectangle(color = Black, length = 5, width = 21)
+    val rectangle1 = Rectangle(color = BLACK, length = 10, width = 15)
+    val rectangle2 = Rectangle(color = WHITE, length = 12, width = 19)
+    val rectangle3 = Rectangle(color = BLACK, length = 5, width = 21)
 
     val figuresList: List<Figure> = listOf(circle1, circle2, rectangle1, rectangle2, rectangle3)
 
-    val blackPerimeter = figuresList.filter { it.color == Black }.sumOf { it.calculatePerimeter() }
-    val whiteArea= figuresList.filter { it.color == White }.sumOf { it.calculateArea() }
+    val blackPerimeter = figuresList.filter { it.color == BLACK }.sumOf { it.calculatePerimeter() }
+    val whiteArea = figuresList.filter { it.color == WHITE }.sumOf { it.calculateArea() }
 
     println("Сумма периметров всех чёрных фигур: $blackPerimeter")
     println("Сумма площадей всех белых фигур: $whiteArea")
